@@ -9,11 +9,11 @@ export default function Home({ params }: { params: { invite: string } }) {
   const invitorName = data[0].replace("_", " ");
   const inviteeName = data[1].replace("_", " ");
 
-  /**useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
-      window.location.assign("https://apps.apple.com/app/6468271439");
-    }, 3000);
-  }, []);*/
+      window.location.assign("https://google.com");
+    }, 2500);
+  }, []);
 
   return (
     <main className="bg-zinc-900 text-white h-screen w-screen">
