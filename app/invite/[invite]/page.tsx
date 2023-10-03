@@ -5,8 +5,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Home({ params }: { params: { invite: string } }) {
-  console.log(params);
-  const data = params.invite.split("%2B%2B%2B");
+  const divider = process.env.NEXT_PUBLIC_STRING_DIVIDER;
+  if (!divider) {
+    throw new Error("String Divider is not set");
+  }
+
+  const data = params.invite.split(divider);
   const invitorName = data[0].replace("_", " ");
   const inviteeName = data[1].replace("_", " ");
 
