@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Home({ params }: { params: { invite: string } }) {
+  console.log(params);
   const data = params.invite.split("%2B%2B%2B");
   const invitorName = data[0].replace("_", " ");
   const inviteeName = data[1].replace("_", " ");
