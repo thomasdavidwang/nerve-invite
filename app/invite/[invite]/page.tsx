@@ -14,17 +14,17 @@ export default function Home({ params }: { params: { invite: string } }) {
   const invitorName = data[0].replace("_", " ");
   const inviteeName = data[1].replace("_", " ");
 
-  useEffect(() => {
+  /**useEffect(() => {
     setTimeout(() => {
       window.location.assign("https://google.com");
     }, 2500);
-  }, []);
+  }, []);*/
 
   return (
     <main className="bg-zinc-900 text-white h-screen w-screen">
       <div className="py-3 flex bg-zinc-800 items-center">
         <Image
-          src="/logo.png"
+          src="/logo.jpeg"
           width={68}
           height={68}
           className="mx-3 rounded-3xl"
@@ -42,9 +42,9 @@ export default function Home({ params }: { params: { invite: string } }) {
           className="bg-white fixed mt-[200px] text-black w-[300px] min-width-222 flex flex-col items-center rounded-xl"
         >
           <Image
-            src="/ticket-logo.png"
-            width={90}
-            height={45}
+            src="/ticket-logo.jpeg"
+            width={135}
+            height={72}
             alt="logo"
             className="mt-5"
           />
